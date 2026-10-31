@@ -1,7 +1,10 @@
 exports.handler = async (event) => {
   const ua = (event.headers['user-agent'] || '').toLowerCase();
   
-  if (ua.includes('mozilla') || ua.includes('chrome') || ua.includes('safari')) {
+  // Chỉ chặn nếu là trình duyệt THẬT (không có chữ roblox hoặc delta)
+  const isRobloxOrExecutor = ua.includes('roblox') || ua.includes('delta') || ua.includes('codex') || ua.includes('fluxus') || ua.includes('synapse');
+  
+  if (!isRobloxOrExecutor && (ua.includes('mozilla') || ua.includes('chrome') || ua.includes('safari'))) {
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'text/html; charset=utf-8' },
@@ -9,7 +12,7 @@ exports.handler = async (event) => {
     };
   }
 
-  // LƯU Ý: Nhớ sửa lại tên file cho đúng với file code gốc của bạn (Main.lua hay core.lua)
+  // THAY LINK RAW GIST CỦA BẠN VÀO ĐÂY
   const githubRawLink = "https://gist.githubusercontent.com/lenguyenvietnam0-stack/a73bc0d8e9b68914adf8da84aed77f39/raw/fb3ac8083130968fa7feeae68252da38ed6ec8eb/Main.lua";
   
   try {
