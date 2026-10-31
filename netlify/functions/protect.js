@@ -10,7 +10,7 @@ exports.handler = async (event) => {
   }
 
   // LƯU Ý: Nhớ sửa lại tên file cho đúng với file code gốc của bạn (Main.lua hay core.lua)
-  const githubRawLink = "https://raw.githubusercontent.com/lenguyenvietnam0-stack/VoBocVzNamHubv4/main/core.lua";
+  const githubRawLink = "https://gist.githubusercontent.com/lenguyenvietnam0-stack/a73bc0d8e9b68914adf8da84aed77f39/raw/fb3ac8083130968fa7feeae68252da38ed6ec8eb/Main.lua";
   
   try {
     const response = await fetch(githubRawLink);
