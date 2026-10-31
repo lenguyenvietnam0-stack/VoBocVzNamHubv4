@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/vznam"
+  to = "/.netlify/functions/protect"
+  status = 200
