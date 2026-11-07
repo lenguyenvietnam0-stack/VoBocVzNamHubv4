@@ -13,7 +13,7 @@ exports.handler = async (event) => {
   }
 
   // THAY LINK RAW GIST CỦA BẠN VÀO ĐÂY
-  const githubRawLink = "https://gist.githubusercontent.com/lenguyenvietnam0-stack/5b219875bd684e70124589dd3b3c6b87/raw/75e75a1e5ee988d07d20fe1e19c6cb7a14a68084/core.lua";
+  const githubRawLink = "https://gist.githubusercontent.com/lenguyenvietnam0-stack/38ddeda55293958e424f30c88f129e23/raw/ac7684694695bad1c9b888744d6aa01d2b5a0aa3/core.lua";
   
   try {
     const response = await fetch(githubRawLink);
